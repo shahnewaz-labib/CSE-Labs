@@ -21,6 +21,7 @@ bool cmp(int a, int b) {
 }
 
 int main() {
+    // freopen("input.txt", "r", stdin);
     int n;
     scanf("%d", &n);
     int arr[n]; iota(arr, arr+n, 0);
