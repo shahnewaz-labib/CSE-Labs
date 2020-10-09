@@ -45,7 +45,12 @@ int main() {
 	scanf("%d %d", &n, &k);
 	for(int i = 0; i < n; i++)
 		scanf("%d", &arr[i]);
-	printf("First occurance of element %d is at position: %d\n", k, first(k));
+	int f = first(k);
+	if(f == -1) {
+		printf("Not Found\n");
+		return 0;
+	}
+	printf("First occurance of element %d is at position: %d\n", k, f);
 	printf("Last occurance of element %d is at position: %d\n", k, last(k));
 	return 0;
 }
