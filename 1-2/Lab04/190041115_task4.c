@@ -3,16 +3,18 @@
 
 int n, m, sx, sy, nc, source_color;
 int grid[101][101];
+bool vis[101][101];
 int dx[] = {0, 1, 0, -1};
 int dy[] = {1, 0, -1, 0};
 
 bool valid(int x, int y) {
-    return x >= 0 && x < n && y >= 0 && y < m;
+    return x >= 0 && x < n && y >= 0 && y < m && !vis[x][y];
 }
 
 void dfs(int x, int y) {
     if(!valid(x, y) || grid[x][y] != source_color) return;
     grid[x][y] = nc;
+    vis[x][y] = true;
     for(int i = 0; i < 4; i++)
         dfs(x+dx[i], y+dy[i]);
 }
