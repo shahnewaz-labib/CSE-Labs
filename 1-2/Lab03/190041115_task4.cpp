@@ -23,7 +23,7 @@ int solve(int x) {
 int main() {
     preprocess();
     int t; cin >> t;
-    for(int i = 0; i <= 15; i++) cout << ans[i] << " "; cout << endl;
+    // for(int i = 0; i <= 15; i++) cout << ans[i] << " "; cout << endl;
     while(t--) {
         int n;
         cin >> n;
