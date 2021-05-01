@@ -17,13 +17,12 @@ int Iterative_binary_search(int x, int *arr) {
 
 int Recursive_binary_search(int x, int *arr, int l, int r) {
 	int m=l+(r-l)/2;
-	if(l>=r) return -1;
-	if(arr[m]==x) return m;
-	else if(arr[m]>x) return Recursive_binary_search(x, ar, l, m-1);
-	else return Recursive_binary_search(x, ar, m+1, r);
-	
-	return 6969; // to check if this line is ever reached
-				 // not really sure
+	if(l < r) {
+		if(arr[m]==x) return m;
+		else if(arr[m]>x) return Recursive_binary_search(x, ar, l, m-1);
+		else return Recursive_binary_search(x, ar, m+1, r);
+	}
+	return -1;
 }
 
 int main() {
