@@ -2,7 +2,6 @@
 #define ll long long
 using namespace std;
 const int mxn = 1e3;
-ll dp[mxn][mxn];
 
 ll fact(int n){
     if(n==0 or n==1) return 1;
