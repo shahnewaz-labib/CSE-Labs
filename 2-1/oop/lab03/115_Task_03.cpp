@@ -14,7 +14,7 @@ public:
     void assignName(const char *Name) {         
         strcpy(name, Name);
     }
-    void setPrice(int price) {
+    void setPrice(double price) {
         if(price >= 0) {
             unitPrice = price;
         } else cout << "Invalid price\n";
