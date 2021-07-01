@@ -54,19 +54,6 @@ public:
         return;
     }
 
-    void RecursivePreOrder(Node *head) {
-        if(head == NULL) return;
-        cout << head->value << "\n";
-        RecursivePreOrder(head->left);
-        RecursivePreOrder(head->right);
-    }
-
-    void RecursiveInOrder(Node *head);
-    void RecursivePostOrder(Node *head);
-
-    void IterativePreOrder();
-    void IterativeInOrder();
-    void IterativePostOrder();
 
     void LevelOrder() {
         queue<Node*> q;
