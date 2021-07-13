@@ -44,10 +44,10 @@ public:
         Root = NULL;
     }
 
-    void insert(int key) {
+    Node* insert(int key) {
         if(Root == NULL) {
             Root = new Node(key, NULL, NULL, NULL);
-            return;
+            return Root;
         }
 
         Node *cur = Root;
@@ -62,6 +62,7 @@ public:
         if(key <= prev->data) prev->left = cur, cur->parent = prev;
         else prev->right = cur, cur->parent = prev;
         updateHeight(cur);
+        return cur;
     }
 
 
@@ -107,4 +108,8 @@ public:
     }
 
 };
+/*
+int main() {
 
+}
+*/
