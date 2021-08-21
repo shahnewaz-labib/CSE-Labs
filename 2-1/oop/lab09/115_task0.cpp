@@ -1,6 +1,6 @@
 // horse.cpp
 // models a horse race
-#include "msoftcon.cpp" //for console graphics
+#include "msoftcon.h" //for console graphics
 #include <iostream>   //for I/O
 #include <cstdlib>    //for random()
 #include <ctime>      //for time()
