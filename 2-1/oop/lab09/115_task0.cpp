@@ -1,6 +1,6 @@
 // horse.cpp
 // models a horse race
-#include "msoftcon.h" //for console graphics
+#include "msoftcon.cpp" //for console graphics
 #include <iostream>   //for I/O
 #include <cstdlib>    //for random()
 #include <ctime>      //for time()
@@ -9,6 +9,9 @@ const int CPF = 5;       //columns per furlong
 const int maxHorses = 7; //maximum number of horses
 class track;             //for forward references
 ////////////////////////////////////////////////////////////////
+
+
+
 class horse
 {
 private:
@@ -27,6 +30,9 @@ public:                     //create the horse
     void display_horse(const float elapsed_time);
 }; //end class horse
 ////////////////////////////////////////////////////////////////
+
+
+
 class track
 {
 private:
@@ -42,6 +48,9 @@ public:
     void run();                  //run the race
     float get_track_len() const; //return total track length
 };                               //end class track
+
+
+
 //---------------------------------------------------------------
 void horse::display_horse(float elapsed_time) //for each horse
 {
@@ -71,6 +80,10 @@ void horse::display_horse(float elapsed_time) //for each horse
         cout << " Time =" << mins << ":" << secs;
     }
 } //end display_horse()
+
+
+
+
 //---------------------------------------------------------------
 track::track(float lenT, int nH) : //track constructor
                                    track_length(lenT), total_horses(nH),
@@ -85,12 +98,19 @@ track::track(float lenT, int nH) : //track constructor
     srand(static_cast<unsigned>(time(&aTime)));
     display_track();
 } //end track constructor
+
+
+
+
 //---------------------------------------------------------------
 track::~track() //track destructor
 {
     for (int j = 0; j < total_horses; j++) //delete each horse
         delete hArray[j];
 }
+
+
+
 //---------------------------------------------------------------
 void track::display_track()
 {
@@ -104,6 +124,9 @@ void track::display_track()
                 cout << '\xDE'; //draw start or finish line else cout << '\xB3’; //draw furlong marker
         }
 } //end display_track()
+
+
+
 //---------------------------------------------------------------
 void track::run()
 {
@@ -118,11 +141,16 @@ void track::run()
     getch(); //eat the keystroke
     cout << endl;
 }
+
+
+
 //---------------------------------------------------------------
 float track::get_track_len() const
 {
     return track_length;
 }
+
+
 /////////////////////////////////////////////////////////////////
 int main()
 {
